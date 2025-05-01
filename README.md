@@ -22,7 +22,7 @@ El archivo incluye campos como:
 
 ### 📂 Origen
 
-Los datos fueron generados manualmente simulando una lista de medicamentos real, basándonos en estructuras similares a la que se encuentra en servicio de la cobertura de obra social PAMI.
+Los datos fueron generados manualmente simulando una lista de medicamentos real, basándonos en estructuras similares a la que se encuentra en servicio de la cobertura de obra social PAMI. Fecha de vigencia : 01/04/2025.
 
 ---
 
