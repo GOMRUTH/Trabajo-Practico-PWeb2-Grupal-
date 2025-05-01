@@ -1,1 +1,10 @@
-[{"DROGA":"accesorio","MARCA":"ONE TOUCH DELICA","PRESENTACION":"lancetas x 100","LABORATORIO":"Sidus-Lifescan","COBERTURA":"100%","COPAGO":"$ 0"},{"DROGA":"accesorio","MARCA":"ONE TOUCH DELICA PLUS","PRESENTACION":"lancetas x 100","LABORATORIO":"Sidus-Lifescan","COBERTURA":"100%","COPAGO":"$ 0"},{"DROGA":"accesorio","MARCA":"LANCETAS ULTRA SOFT","PRESENTACION":"lancetas x 100","LABORATORIO":"Sidus-Lifescan","COBERTURA":"100%","COPAGO":"$ 0"},{"DROGA":"warfarina","MARCA":"CIRCUVIT","PRESENTACION":"5 mg comp.x 50","LABORATORIO":"Ariston","COBERTURA":"80%","COPAGO":"$ 3210.48"},{"DROGA":"aceite de pescado","MARCA":"OMACOR","PRESENTACION":"caps.blandas x 28","LABORATORIO":"Richmond","COBERTURA":"50%","COPAGO":"$ 2483.68"},{"DROGA":"aceite de salmón","MARCA":"REGULIP","PRESENTACION":"1 g cáps.x 60","LABORATORIO":"Raffo","COBERTURA":"40%","COPAGO":"$ 29096.57"},{"DROGA":"acetazolamida","MARCA":"ACETA","PRESENTACION":"250 mg comp.x 20","LABORATORIO":"Novoplos","COBERTURA":"80%","COPAGO":"$ 2165.09"}]
+[{"DROGA":"accesorio","MARCA":"ONE TOUCH DELICA","PRESENTACION":"lancetas x 100","LABORATORIO":"Sidus-Lifescan","COBERTURA":"100%","COPAGO":"$ 0"},
+{"DROGA":"accesorio","MARCA":"ONE TOUCH DELICA PLUS","PRESENTACION":"lancetas x 100","LABORATORIO":"Sidus-Lifescan","COBERTURA":"100%","COPAGO":"$ 0"},
+{"DROGA":"accesorio","MARCA":"LANCETAS ULTRA SOFT","PRESENTACION":"lancetas x 100","LABORATORIO":"Sidus-Lifescan","COBERTURA":"100%","COPAGO":"$ 0"},
+{"DROGA":"ácido omega 3-ésteres etílicos a","MARCA":"OMECAP 90","PRESENTACION":"cáps.blandas x 30","LABORATORIO":"Gador","COBERTURA":"40%","COPAGO":"$ 26829.71"},
+{"DROGA":"zopiclona","MARCA":"INSOMNIUM","PRESENTACION":"comp.x 30","LABORATORIO":"Gador","COBERTURA":"50%","COPAGO":"$ 5110.81"},
+{"DROGA":"warfarina","MARCA":"CIRCUVIT","PRESENTACION":"5 mg comp.x 50","LABORATORIO":"Ariston","COBERTURA":"80%","COPAGO":"$ 3210.48"},
+{"DROGA":"aceite de pescado","MARCA":"OMACOR","PRESENTACION":"caps.blandas x 28","LABORATORIO":"Richmond","COBERTURA":"50%","COPAGO":"$ 2483.68"},
+{"DROGA":"aceite de salmón","MARCA":"REGULIP","PRESENTACION":"1 g cáps.x 60","LABORATORIO":"Raffo","COBERTURA":"40%","COPAGO":"$ 29096.57"},
+{"DROGA":"acetazolamida","MARCA":"ACETA","PRESENTACION":"250 mg comp.x 20","LABORATORIO":"Novoplos","COBERTURA":"80%","COPAGO":"$ 2165.09"}
+]
