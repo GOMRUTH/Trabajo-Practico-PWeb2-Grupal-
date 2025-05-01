@@ -135,3 +135,9 @@ curl http://localhost:7050/datos/cobertura/baja
 ``` json
 curl -X DELETE http://localhost:7050/datos/laboratorio/Gador
 ```
+### 👨‍💻 Autores
+Integrantes del grupo:
+- `Dalila Diaz`
+- `Ruth Leila Gomez`
+- `Karen Ayelen Romero`
+- `Marcos Felipe Zardain`
