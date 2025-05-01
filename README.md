@@ -124,7 +124,6 @@ curl -X DELETE -H "Content-Type: application/json" \
 curl http://localhost:7050/datos/laboratorio/Sidus-Lifescan
 ```
 ### 🔍 Buscar por droga
-curl http://localhost:7050/datos/droga/acetazolamida
 ``` json
 curl http://localhost:7050/datos/droga/acetazolamida
 ```
