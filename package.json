@@ -1,0 +1,16 @@
+{
+  "name": "proyecto_pw2",
+  "version": "1.0.0",
+  "description": "API y Sistema CRUD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Grupo 3",
+  "license": "ISC",
+  "dependencies": {
+    "asciichart": "^1.5.25",
+    "express": "^5.1.0",
+    "morgan": "^1.10.0"
+  }
+}

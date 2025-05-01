@@ -1,0 +1,2 @@
+Listado de precios de medicamentos para Afiliados
+Listado de medicamentos que cubre PAMI, con el detalle de droga, marca, presentación, laboratorio, precio, cobertura y copago (costo a cargo del afiliado). Fecha de vigencia : 01/04/2025
