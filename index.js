@@ -67,49 +67,18 @@ app.put("/datos", (req, res) => {
 });
 
 // DELETE - eliminar por MARCA
-app.delete("/datos", (req, res) => {
-  const medicamento = req.body;
-  const inicial = datos.length;
-  datos = datos.filter(m => m.MARCA !== medicamento.MARCA);
+app.delete("/datos/marca/:med", (req, res) => {
+  const marca = req.params.med.toLowerCase();
+  const antes = datos.length;
+  datos = datos.filter(m => m.MARCA.toLowerCase() !== marca);
+  const eliminados = antes - datos.length;
 
-  if (datos.length < inicial) {
+  if (eliminados > 0) {
     fs.writeFileSync("./data/medicamentos_cobertura.json", JSON.stringify(datos));
-    return res.sendStatus(200);
+    return res.status(200).json({ message: `${eliminados} medicamentos eliminados` });
   } else {
-    return res.status(204).json({ message: "Producto no encontrado" });
+    return res.status(200).json({ message: "No se encontraron medicamentos para eliminar" });
   }
-});
-
-// GET - buscar por laboratorio
-app.get("/datos/laboratorio/:lab", (req, res) => {
-  const lab = req.params.lab.toLowerCase();
-  const resultado = datos.filter(m => m.LABORATORIO?.toLowerCase().includes(lab));
-
-  resultado.length
-    ? res.status(200).json(resultado)
-    : res.status(204).json({ message: "No se encontraron medicamentos" });
-});
-
-// GET - buscar por droga
-app.get("/datos/droga/:droga", (req, res) => {
-  const droga = req.params.droga.toLowerCase();
-  const resultado = datos.filter(m => m.DROGA?.toLowerCase().includes(droga));
-
-  resultado.length
-    ? res.status(200).json(resultado)
-    : res.status(204).json({ message: "No se encontraron medicamentos" });
-});
-
-// GET - cobertura < 50%
-app.get("/datos/cobertura/baja", (req, res) => {
-  const resultado = datos.filter(m => {
-    const cobertura = parseFloat(m.COBERTURA.replace("%", "").trim());
-    return cobertura < 50;
-  });
-
-  resultado.length
-    ? res.status(200).json(resultado)
-    : res.status(204).json({ message: "No se encontraron medicamentos con baja cobertura" });
 });
 
 // DELETE - eliminar por laboratorio
@@ -123,8 +92,40 @@ app.delete("/datos/laboratorio/:lab", (req, res) => {
     fs.writeFileSync("./data/medicamentos_cobertura.json", JSON.stringify(datos));
     return res.status(200).json({ message: `${eliminados} medicamentos eliminados` });
   } else {
-    return res.status(204).json({ message: "No se encontraron medicamentos para eliminar" });
+    return res.status(200).json({ message: "No se encontraron medicamentos para eliminar" });
   }
+});
+
+// GET - buscar por laboratorio
+app.get("/datos/laboratorio/:lab", (req, res) => {
+  const lab = req.params.lab.toLowerCase();
+  const resultado = datos.filter(m => m.LABORATORIO?.toLowerCase().includes(lab));
+
+  resultado.length
+    ? res.status(200).json(resultado)
+    : res.status(200).json({ message: "No se encontraron medicamentos" });
+});
+
+// GET - buscar por droga
+app.get("/datos/droga/:droga", (req, res) => {
+  const droga = req.params.droga.toLowerCase();
+  const resultado = datos.filter(m => m.DROGA?.toLowerCase().includes(droga));
+
+  resultado.length
+    ? res.status(200).json(resultado)
+    : res.status(200).json({ message: "No se encontraron medicamentos" });
+});
+
+// GET - cobertura < 50%
+app.get("/datos/cobertura/baja", (req, res) => {
+  const resultado = datos.filter(m => {
+    const cobertura = parseFloat(m.COBERTURA.replace("%", "").trim());
+    return cobertura < 50;
+  });
+
+  resultado.length
+    ? res.status(200).json(resultado)
+    : res.status(200).json({ message: "No se encontraron medicamentos con baja cobertura" });
 });
 
 app.listen(7050, () => {
