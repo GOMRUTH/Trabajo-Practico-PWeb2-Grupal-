@@ -67,10 +67,11 @@ app.put("/datos", (req, res) => {
 });
 
 // DELETE - eliminar por MARCA
+// Medicamentos con más de una palabra deben ser ingresados con "-"
 app.delete("/datos/marca/:med", (req, res) => {
-  const marca = req.params.med.toLowerCase();
+  let marca = req.params.med.toLowerCase();
   const antes = datos.length;
-  datos = datos.filter(m => m.MARCA.toLowerCase() !== marca);
+  datos = datos.filter(m => m.MARCA.toLowerCase().replace(/\s+/g, '-') !== marca);
   const eliminados = antes - datos.length;
 
   if (eliminados > 0) {
