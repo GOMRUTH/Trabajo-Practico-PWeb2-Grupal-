@@ -62,7 +62,7 @@ app.put("/datos", (req, res) => {
     fs.writeFileSync("./data/medicamentos_cobertura.json", JSON.stringify(datos));
     return res.json({ message: "Producto actualizado", medicamento });
   } else {
-    return res.status(404).json({ message: "Producto no encontrado" });
+    return res.status(204).json({ message: "Producto no encontrado" });
   }
 });
 
@@ -74,9 +74,9 @@ app.delete("/datos", (req, res) => {
 
   if (datos.length < inicial) {
     fs.writeFileSync("./data/medicamentos_cobertura.json", JSON.stringify(datos));
-    return res.sendStatus(204);
+    return res.sendStatus(200);
   } else {
-    return res.status(404).json({ message: "Producto no encontrado" });
+    return res.status(204).json({ message: "Producto no encontrado" });
   }
 });
 
@@ -87,7 +87,7 @@ app.get("/datos/laboratorio/:lab", (req, res) => {
 
   resultado.length
     ? res.status(200).json(resultado)
-    : res.status(404).json({ message: "No se encontraron medicamentos" });
+    : res.status(204).json({ message: "No se encontraron medicamentos" });
 });
 
 // GET - buscar por droga
@@ -97,7 +97,7 @@ app.get("/datos/droga/:droga", (req, res) => {
 
   resultado.length
     ? res.status(200).json(resultado)
-    : res.status(404).json({ message: "No se encontraron medicamentos" });
+    : res.status(204).json({ message: "No se encontraron medicamentos" });
 });
 
 // GET - cobertura < 50%
@@ -109,7 +109,7 @@ app.get("/datos/cobertura/baja", (req, res) => {
 
   resultado.length
     ? res.status(200).json(resultado)
-    : res.status(404).json({ message: "No se encontraron medicamentos con baja cobertura" });
+    : res.status(204).json({ message: "No se encontraron medicamentos con baja cobertura" });
 });
 
 // DELETE - eliminar por laboratorio
@@ -123,7 +123,7 @@ app.delete("/datos/laboratorio/:lab", (req, res) => {
     fs.writeFileSync("./data/medicamentos_cobertura.json", JSON.stringify(datos));
     return res.status(200).json({ message: `${eliminados} medicamentos eliminados` });
   } else {
-    return res.status(404).json({ message: "No se encontraron medicamentos para eliminar" });
+    return res.status(204).json({ message: "No se encontraron medicamentos para eliminar" });
   }
 });
 
