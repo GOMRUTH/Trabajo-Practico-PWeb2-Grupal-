@@ -94,7 +94,7 @@ Los datos fueron generados manualmente simulando una lista de medicamentos real,
 ### ✅ DELETE `/datos/laboratorio/:lab`
 **Descripción:** Elimina todos los medicamentos asociados a un laboratorio dado.
 
-## 🧪 Pruebas con curl
+## 🧪 Pruebas con curl (Terminal)
 ### ▶️ Obtener todos los medicamentos
 ``` json
 curl http://localhost:7050/datos
