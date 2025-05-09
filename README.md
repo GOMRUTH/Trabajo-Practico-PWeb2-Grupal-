@@ -47,7 +47,7 @@ Los datos fueron generados manualmente simulando una lista de medicamentos real,
 ### ✅ GET `/datos`
 **Descripción:** Devuelve la lista completa de medicamentos.  
 **Respuesta:** `200 OK` con array de objetos JSON.
-![Datos ingresados](assets/img/1)
+![Datos ingresados](assets/img/1.png)
 
 ---
 
@@ -64,7 +64,7 @@ Los datos fueron generados manualmente simulando una lista de medicamentos real,
   "COPAGO": "$ 3025.09"
 }
 ```
-![Datos ingresados](assets/img/2)
+![Datos ingresados](assets/img/2.png)
 ### ✅ PUT `/datos`
 **Descripción:** Modifica un medicamento existente (por MARCA y LABORATORIO).
 **Cuerpo esperado (JSON):**
@@ -77,12 +77,12 @@ Los datos fueron generados manualmente simulando una lista de medicamentos real,
   "COPAGO": "$ 1450.09"
 }
 ```
-![Datos ingresados](assets/img/3)
+![Datos ingresados](assets/img/3.png)
 
 ### ✅ DELETE `/datos/marca/:marca`
 **Descripción:** Elimina todos los medicamentos con una MARCA específica.  
 **Nota:** Para marcas con espacios, usá guiones (-) en su lugar. **Ejemplo:** /datos/marca/mi-marca-generica 
-![Datos ingresados](assets/img/4)
+![Datos ingresados](assets/img/4.png)
 
 ### ✅ DELETE `/datos/droga/:droga`
 **Descripción:** Elimina un medicamento por su DROGA.
