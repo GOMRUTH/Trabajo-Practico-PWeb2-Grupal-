@@ -82,6 +82,22 @@ app.delete("/datos/marca/:med", (req, res) => {
   }
 });
 
+// DELETE - eliminar por droga
+// Medicamentos con más de una palabra deben ser ingresados con "-"
+app.delete("/datos/droga/:droga", (req, res) => {
+  const drogaParam = req.params.droga.toLowerCase();
+  const antes = datos.length;
+  datos = datos.filter(m => m.DROGA.toLowerCase().replace(/\s+/g, '-') !== drogaParam);
+  const eliminados = antes - datos.length;
+
+  if (eliminados > 0) {
+    fs.writeFileSync("./data/medicamentos_cobertura.json", JSON.stringify(datos));
+    return res.status(200).json({ message: `${eliminados} medicamentos eliminados` });
+  } else {
+    return res.status(404).json({ message: "No se encontraron medicamentos para eliminar" });
+  }
+});
+
 // DELETE - eliminar por laboratorio
 app.delete("/datos/laboratorio/:lab", (req, res) => {
   const laboratorio = req.params.lab.toLowerCase();
@@ -94,25 +110,6 @@ app.delete("/datos/laboratorio/:lab", (req, res) => {
     return res.status(200).json({ message: `${eliminados} medicamentos eliminados` });
   } else {
     return res.status(200).json({ message: "No se encontraron medicamentos para eliminar" });
-  }
-});
-
-// DELETE - eliminar por droga
-app.delete("/datos/droga/:droga", (req, res) => {
-  const drogaParam = req.params.droga.toLowerCase().replace(/-/g, ' ').trim();
-
-  const antes = datos.length;
-  datos = datos.filter(m => 
-    m.DROGA.toLowerCase().replace(/\s+/g, ' ').trim() !== drogaParam
-  );
-
-  const eliminados = antes - datos.length;
-
-  if (eliminados > 0) {
-    fs.writeFileSync("./data/medicamentos_cobertura.json", JSON.stringify(datos));
-    return res.status(200).json({ message: `${eliminados} medicamentos eliminados` });
-  } else {
-    return res.status(404).json({ message: "No se encontraron medicamentos para eliminar" });
   }
 });
 
