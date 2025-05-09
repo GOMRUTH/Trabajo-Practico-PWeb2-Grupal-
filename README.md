@@ -105,7 +105,6 @@ Los datos fueron generados manualmente simulando una lista de medicamentos real,
 **Descripción:** Elimina todos los medicamentos asociados a un laboratorio dado.
 
 ---
----
 
 ## 🧪 Pruebas con curl (Terminal)
 ### ▶️ Obtener todos los medicamentos
