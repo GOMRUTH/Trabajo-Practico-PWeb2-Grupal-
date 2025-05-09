@@ -93,7 +93,7 @@ Los datos fueron generados manualmente simulando una lista de medicamentos real,
 
 ---
 
-### ✅ DELETE `/datos/marca/:marca`
+### ✅ DELETE `/datos/marca/:med`
 **Descripción:** Elimina todos los medicamentos con una MARCA específica.  
 **Nota:** Para marcas con espacios, usá guiones (-) en su lugar. **Ejemplo:** /datos/marca/mi-marca-generica 
 ![Datos ingresados](assets/img/4.png)
