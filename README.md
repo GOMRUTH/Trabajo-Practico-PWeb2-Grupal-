@@ -76,7 +76,7 @@ Los datos fueron generados manualmente simulando una lista de medicamentos real,
 }
 ```
 ### ✅ DELETE `/datos/marca/:marca`
-**Descripción:** Elimina todos los medicamentos con una MARCA específica. 
+**Descripción:** Elimina todos los medicamentos con una MARCA específica.  
 **Nota:** Para marcas con espacios, usá guiones (-) en su lugar. **Ejemplo:** /datos/marca/mi-marca-generica 
 
 ### ✅ DELETE `/datos/droga/:droga`
