@@ -75,15 +75,12 @@ Los datos fueron generados manualmente simulando una lista de medicamentos real,
   "COPAGO": "$ 1450.09"
 }
 ```
-### ✅ DELETE `/datos`
+### ✅ DELETE `/datos/marca/:marca`
 **Descripción:** Elimina un medicamento por su MARCA.
-**Cuerpo esperado (JSON):**
 
-``` json
-{
-  "MARCA": "DIABO"
-}
-```
+### ✅ DELETE `/datos/droga/:droga`
+**Descripción:** Elimina un medicamento por su DROGA.
+
 ### ✅ GET `/datos/laboratorio/:lab`
 **Descripción:** Filtra medicamentos por laboratorio.
 
