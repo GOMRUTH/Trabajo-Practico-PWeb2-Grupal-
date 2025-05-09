@@ -49,6 +49,15 @@ Los datos fueron generados manualmente simulando una lista de medicamentos real,
 **Respuesta:** `200 OK` con array de objetos JSON.
 ![Datos ingresados](assets/img/1.png)
 
+### ✅ GET `/datos/laboratorio/:lab`
+**Descripción:** Filtra medicamentos por laboratorio.
+
+### ✅ GET `/datos/droga/:droga`
+**Descripción:** Filtra medicamentos por droga.
+
+### ✅ GET `/datos/cobertura/baja`
+**Descripción:** Retorna medicamentos cuya cobertura es menor al 50%.
+
 ---
 
 ### ✅ POST `/datos`
@@ -65,6 +74,9 @@ Los datos fueron generados manualmente simulando una lista de medicamentos real,
 }
 ```
 ![Datos ingresados](assets/img/2.png)
+
+---
+
 ### ✅ PUT `/datos`
 **Descripción:** Modifica un medicamento existente (por MARCA y LABORATORIO).
 **Cuerpo esperado (JSON):**
@@ -79,6 +91,8 @@ Los datos fueron generados manualmente simulando una lista de medicamentos real,
 ```
 ![Datos ingresados](assets/img/3.png)
 
+---
+
 ### ✅ DELETE `/datos/marca/:marca`
 **Descripción:** Elimina todos los medicamentos con una MARCA específica.  
 **Nota:** Para marcas con espacios, usá guiones (-) en su lugar. **Ejemplo:** /datos/marca/mi-marca-generica 
@@ -87,17 +101,11 @@ Los datos fueron generados manualmente simulando una lista de medicamentos real,
 ### ✅ DELETE `/datos/droga/:droga`
 **Descripción:** Elimina un medicamento por su DROGA.
 
-### ✅ GET `/datos/laboratorio/:lab`
-**Descripción:** Filtra medicamentos por laboratorio.
-
-### ✅ GET `/datos/droga/:droga`
-**Descripción:** Filtra medicamentos por droga.
-
-### ✅ GET `/datos/cobertura/baja`
-**Descripción:** Retorna medicamentos cuya cobertura es menor al 50%.
-
 ### ✅ DELETE `/datos/laboratorio/:lab`
 **Descripción:** Elimina todos los medicamentos asociados a un laboratorio dado.
+
+---
+---
 
 ## 🧪 Pruebas con curl (Terminal)
 ### ▶️ Obtener todos los medicamentos
